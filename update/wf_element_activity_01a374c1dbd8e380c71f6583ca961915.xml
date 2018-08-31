@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_element_activity">
+    <wf_element_activity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <attributes/>
+        <base_provider display_value="Run Script">d0c7fe11eb013100fc5e8a7af106fee0</base_provider>
+        <category/>
+        <checked_out_by/>
+        <default_height/>
+        <default_width/>
+        <description/>
+        <image>images/heisenberg_icons/workflow_ie8/provider_runscript.png</image>
+        <input_meta>{"name":"Input","type":"DATA_OBJECT","properties":[{"name":"target_ip","type":"STRING","mandatory":false},{"name":"target_mid","type":"STRING","mandatory":false}]}</input_meta>
+        <input_process_script/>
+        <input_transform/>
+        <local_variables/>
+        <name>Quick Discover By IP</name>
+        <output_meta/>
+        <output_process_script/>
+        <output_transform/>
+        <processing_script><![CDATA[var d = new global.Discovery();
+var statusID = d.discoveryFromIP(activityInput.target_ip, activityInput.target_mid);]]></processing_script>
+        <sample_payloads>{}</sample_payloads>
+        <short_description/>
+        <style/>
+        <sys_class_name>wf_element_activity</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-31 11:11:49</sys_created_on>
+        <sys_id>01a374c1dbd8e380c71f6583ca961915</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Quick Discover By IP</sys_name>
+        <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+        <sys_update_name>wf_element_activity_01a374c1dbd8e380c71f6583ca961915</sys_update_name>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-31 11:12:31</sys_updated_on>
+        <version_container_id>dbb3b0c1dbd8e380c71f6583ca9619ec</version_container_id>
+    </wf_element_activity>
+    <sys_translated_text action="delete_multiple" query="documentkey=01a374c1dbd8e380c71f6583ca961915"/>
+    <wf_versionable action="INSERT_OR_UPDATE">
+        <checked_out/>
+        <checked_out_by/>
+        <published>true</published>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-31 11:11:49</sys_created_on>
+        <sys_id>d7b3b0c1dbd8e380c71f6583ca9619ed</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-31 11:12:31</sys_updated_on>
+        <valid_from>2018-08-31 11:12:31</valid_from>
+        <valid_to/>
+        <version>1</version>
+        <version_container_id>dbb3b0c1dbd8e380c71f6583ca9619ec</version_container_id>
+        <wf_element_definition display_value="Quick Discover By IP">01a374c1dbd8e380c71f6583ca961915</wf_element_definition>
+    </wf_versionable>
+</record_update>
