@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_flow_record_trigger">
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="cmdb_ci_vm_instance">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:16:35</sys_created_on>
+        <sys_id>ea199d74dbd8a380c71f6583ca9619b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+        <sys_update_name>sys_flow_record_trigger_ea199d74dbd8a380c71f6583ca9619b7</sys_update_name>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:16:35</sys_updated_on>
+        <table>cmdb_ci_vm_instance</table>
+    </sys_flow_record_trigger>
+</record_update>

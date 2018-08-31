@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_flow_trigger_plan">
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"ea199d74dbd8a380c71f6583ca9619b9","name":"plan"}}</plan>
+        <plan_id>a69b8dbcdb58a380c71f6583ca961964</plan_id>
+        <snapshot>32b329b8db102780e243b6d1ba96198f</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:16:35</sys_created_on>
+        <sys_id>ea199d74dbd8a380c71f6583ca9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ea199d74dbd8a380c71f6583ca9619b7</sys_name>
+        <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+        <sys_update_name>sys_flow_trigger_plan_ea199d74dbd8a380c71f6583ca9619b9</sys_update_name>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:16:35</sys_updated_on>
+        <trigger display_value="">ea199d74dbd8a380c71f6583ca9619b7</trigger>
+    </sys_flow_trigger_plan>
+</record_update>

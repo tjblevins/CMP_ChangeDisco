@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="QuickDiscover">784219b8db98a380c71f6583ca961940</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot display_value="QuickDiscover">784219b8db98a380c71f6583ca961940</compiled_snapshot>
+        <display_text/>
+        <flow display_value="VM Instance Discovery">a69b8dbcdb58a380c71f6583ca961964</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:16:23</sys_created_on>
+        <sys_id>a3091d74dbd8a380c71f6583ca9619bd</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+        <sys_update_name>sys_hub_action_instance_a3091d74dbd8a380c71f6583ca9619bd</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-08-30 20:03:03</sys_updated_on>
+        <ui_id>2e8c65e1-d99c-4a3c-8432-0c0f8581ca18</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a3091d74dbd8a380c71f6583ca9619bd"/>
+    <sys_element_mapping action="delete_multiple" query="id=a3091d74dbd8a380c71f6583ca9619bd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>targetip</field>
+        <id>a3091d74dbd8a380c71f6583ca9619bd</id>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:16:23</sys_created_on>
+        <sys_id>2b091d74dbd8a380c71f6583ca9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:16:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fa7099f4db98a380c71f6583ca96199c</table>
+        <value>{{d353ad0f-7d2e-41e3-aee9-b7c953b40dfd.privateip}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>targetip</field>
+        <id>a3091d74dbd8a380c71f6583ca9619bd</id>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:16:33</sys_created_on>
+        <sys_id>ca195d74dbd8a380c71f6583ca961961</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:16:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_784219b8db98a380c71f6583ca961940</table>
+        <value>{{d353ad0f-7d2e-41e3-aee9-b7c953b40dfd.privateip}}</value>
+    </sys_element_mapping>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="publicip" label="PublicIP" language="en" table="var__m_sys_hub_action_output_92a51130dbd8a380c71f6583ca9619e7">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>publicip</element>
+            <help/>
+            <hint/>
+            <label>PublicIP</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_output_92a51130dbd8a380c71f6583ca9619e7</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>john.depot</sys_created_by>
+            <sys_created_on>2018-08-30 19:12:47</sys_created_on>
+            <sys_id>72385d34dbd8a380c71f6583ca961949</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>PublicIP</sys_name>
+            <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_action_output_92a51130dbd8a380c71f6583ca9619e7_publicip_en</sys_update_name>
+            <sys_updated_by>john.depot</sys_updated_by>
+            <sys_updated_on>2018-08-30 19:12:47</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get VM IP">7b389d34dbd8a380c71f6583ca961922</action>
+        <cid>d291d39a-b208-4445-9483-f009572f4106</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:12:51</sys_created_on>
+        <sys_id>33389d34dbd8a380c71f6583ca96192d</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Script step</sys_name>
+        <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+        <sys_update_name>sys_hub_step_instance_33389d34dbd8a380c71f6583ca96192d</sys_update_name>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 20:02:52</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=33389d34dbd8a380c71f6583ca96192d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>33389d34dbd8a380c71f6583ca96192d</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:12:52</sys_created_on>
+        <sys_id>80489d34dbd8a380c71f6583ca96194a</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 20:02:52</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+
+    
+
+	var getIPAddresses  = function(vmId) {
+		var ipaddr=getIPAddressObject(vmId);
+		var ipAddress = {};
+		if(gs.nil(ipaddr))
+			return "";
+		var privateIp= ipaddr.getValue('private_ip');
+		var publicIp=  ipaddr.getValue('public_ip');
+		var ip_address=  ipaddr.getValue('ip_address');
+		ipAddress['private_ip']=privateIp;
+		ipAddress['public_ip']=publicIp;
+		// vmware points to a different table and has its custom attribute for storing ip_adderess,need to be relooked.
+		if(gs.nil(publicIp) &amp;&amp; gs.nil(privateIp))
+			ipAddress['public_ip']=ip_address;
+
+		return global.JSON.stringify(ipAddress);
+	};
+    
+    var getIPAddressObject = function(vmId) {
+		var useTypeId, implementTypeId,endpoint,ipaddr;
+		var gRelType = new GlideRecord("cmdb_rel_type");
+		gRelType.query("name","Use End Point To::Use End Point From");
+		if(gRelType.next())
+			useTypeId  = gRelType.getUniqueValue();
+
+		var grRelTypeImpl = new GlideRecord("cmdb_rel_type");
+		grRelTypeImpl.query("name","Implement End Point To::Implement End Point From");
+		if(grRelTypeImpl.next())
+			implementTypeId  = grRelTypeImpl.getUniqueValue();
+
+		var gsCI = new GlideRecord("cmdb_rel_ci");
+		gsCI.addQuery("parent",vmId);
+		gsCI.addQuery("type",useTypeId);
+		gsCI.query();
+		var endpoints = [];
+
+		if(gsCI.hasNext()){
+			while(gsCI.next()){
+			var useEndpoint = gsCI.getValue("child");
+			endpoints.push(useEndpoint);
+		}
+		}
+		for(var myendpoint in endpoints){
+		var gsCINet = new GlideRecord("cmdb_rel_ci");
+		gsCINet.addQuery("parent",endpoints[myendpoint]);
+		gsCINet.addQuery("type",implementTypeId);
+		gsCINet.query();
+		if(gsCINet.hasNext()){
+				while(gsCINet.next()){
+					var endpointTable = gsCINet.child.getRefRecord().getTableName();
+					var isNicTable= (endpointTable == "cmdb_ci_vmware_nic" )|| (endpointTable == "cmdb_ci_nic");
+					if(isNicTable){
+					ipaddr=new GlideRecord(gsCINet.child.getRefRecord().getTableName());
+					ipaddr.get(gsCINet.getValue("child"));
+					return ipaddr;
+					}
+				}
+			}
+		}
+
+			return "";
+		};
+    
+      var ipObj = getIPAddressObject(inputs.vmId);
+  gs.info("IPAddresses: " + ipObj.getValue('private_ip'));
+  outputs.privateIp = ipObj.getValue('private_ip');
+  outputs.publicIp = ipObj.getValue('public_ip');
+  outputs.ip_address = ipObj.getValue('ip_address');
+      
+})(inputs, outputs);
+</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>33389d34dbd8a380c71f6583ca96192d</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:12:52</sys_created_on>
+        <sys_id>cc489d34dbd8a380c71f6583ca961949</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:12:52</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=33389d34dbd8a380c71f6583ca96192d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>33389d34dbd8a380c71f6583ca96192d</id>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:12:52</sys_created_on>
+        <sys_id>88489d34dbd8a380c71f6583ca961949</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:12:52</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>33389d34dbd8a380c71f6583ca96192d</id>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:12:52</sys_created_on>
+        <sys_id>4c489d34dbd8a380c71f6583ca961949</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:12:52</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>vmId</field>
+        <id>33389d34dbd8a380c71f6583ca96192d</id>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2018-08-30 19:12:52</sys_created_on>
+        <sys_id>0c489d34dbd8a380c71f6583ca96194a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2018-08-30 19:12:52</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_33389d34dbd8a380c71f6583ca96192d</table>
+        <value>{{action.vmsysid}}</value>
+    </sys_element_mapping>
+</record_update>
