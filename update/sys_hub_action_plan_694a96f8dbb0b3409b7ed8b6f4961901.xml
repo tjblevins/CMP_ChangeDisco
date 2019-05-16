@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_plan">
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Get VM IP">92a51130dbd8a380c71f6583ca9619e7</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"694a96f8dbb0b3409b7ed8b6f4961901","name":"plan"}}</plan>
+        <snapshot>0f3ad2f8dbb0b3409b7ed8b6f49619f4</snapshot>
+        <sys_class_name>sys_hub_action_plan</sys_class_name>
+        <sys_created_by>john.depot</sys_created_by>
+        <sys_created_on>2019-04-11 16:43:53</sys_created_on>
+        <sys_id>694a96f8dbb0b3409b7ed8b6f4961901</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>92a51130dbd8a380c71f6583ca9619e7</sys_name>
+        <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+        <sys_update_name>sys_hub_action_plan_694a96f8dbb0b3409b7ed8b6f4961901</sys_update_name>
+        <sys_updated_by>john.depot</sys_updated_by>
+        <sys_updated_on>2019-04-11 16:43:53</sys_updated_on>
+    </sys_hub_action_plan>
+</record_update>

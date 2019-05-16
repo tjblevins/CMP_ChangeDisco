@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_type_definition">
     <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
         <access>public</access>
+        <acls/>
         <active>true</active>
         <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description/>
         <internal_name>quickdiscover</internal_name>
         <label_cache>[{"name":"{{action.targetip}}","label":"action➛TargetIP","type":"action","ref":""},{"name":"{{action.mid}}","label":"action➛MID","type":"action","ref":""}]</label_cache>
-        <latest_snapshot>e44219b8db98a380c71f6583ca961922</latest_snapshot>
+        <latest_snapshot>fb6a8606dbdcfb009b7ed8b6f49619b5</latest_snapshot>
         <master_snapshot>784219b8db98a380c71f6583ca961940</master_snapshot>
         <name>QuickDiscover</name>
         <outputs/>

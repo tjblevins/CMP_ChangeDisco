@@ -9,14 +9,14 @@
         <sys_created_by>john.depot</sys_created_by>
         <sys_created_on>2018-08-30 19:16:23</sys_created_on>
         <sys_id>af091d74dbd8a380c71f6583ca961985</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>record_create_or_update</sys_name>
         <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
         <sys_update_name>sys_hub_trigger_instance_af091d74dbd8a380c71f6583ca961985</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-08-30 20:03:03</sys_updated_on>
+        <sys_updated_on>2019-05-01 15:13:24</sys_updated_on>
         <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
