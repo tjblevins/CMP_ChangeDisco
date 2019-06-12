@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="current" label="Record" language="en" table="var__m_sys_hub_flow_input_9dd2b43cdbcef3008669db184b96195a">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>current</element>
+            <help/>
+            <hint/>
+            <label>Record</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_9dd2b43cdbcef3008669db184b96195a</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2019-06-12 12:30:25</sys_created_on>
+            <sys_id>1dd2b43cdbcef3008669db184b96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Record</sys_name>
+            <sys_package display_value="CMP_Discovery" source="x_snc_cmp_discover">979a097cdb58a380c71f6583ca9619db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMP_Discovery">979a097cdb58a380c71f6583ca9619db</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_9dd2b43cdbcef3008669db184b96195a_current_en</sys_update_name>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2019-06-12 12:30:25</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
